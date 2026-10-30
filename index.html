@@ -3,64 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jak to policzyć </title>
-
+    <title>Jak to policzyć</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/dark.css">
 </head>
-<body>
+<body id="top">
 
-
-    <header>
-    <div class="logo">
-        <h2>Jak to policzyć</h2>
-    </div>
-
-        <button id="theme-toggle">🌓 Motyw</button>
-        <button id="mobile-menu-btn">☰</button>
-
-        <nav id="main-nav">
-            <ul>
-                <li><a href="index.html">Strona Główna</a></li>
-                <li><a href="teoria.html">Teoria i Wzory</a></li>
-                <li><a href="gra.html">Gra Matematyczna</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <h1>Jak to policzyć</h1>
+        <div class="header-actions">
+            <a href="#top" class="btn-top">Powrót na górę</a>
+            <button id="theme-toggle" aria-label="Zmień motyw">🌓 Motyw</button>
+        </div>
     </header>
 
-
     <main>
+        <nav class="theory-nav" aria-label="Menu teorii">
+            <ul class="accordion-menu">
+                <li class="accordion-item main-accordion">
+                    <button class="accordion-btn main-btn">Teoria</button>
+                    <div class="accordion-content">
+                        <ul class="subject-list">
+                            
+                            <li class="accordion-item subject-item">
+                                <button class="accordion-btn subject-btn">Geometria</button>
+                                <div class="accordion-content">
+                                    <ul class="level-list">
+                                        <li>
+                                            <button class="level-btn">Podstawa</button>
+                                            <ul class="topic-list">
+                                                <li><a href="#pitagoras">Twierdzenie Pitagorasa</a></li>
+                                                <li><a href="#pole-trojkata">Pole trójkąta</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <button class="level-btn">Rozszerzenie</button>
+                                            <ul class="topic-list">
+                                                <li><a href="#twierdzenie-sinusow">Twierdzenie sinusów</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
 
-        <section class="hero">
-            <h1>Jak to policzyć?</h1>
-            <p>Przeglądaj najważniejsze twierdzenia z geometrii czy kombinatoryki i sprawdź swój refleks w naszej grze z czasem.</p>
+                            <li class="accordion-item subject-item">
+                                <button class="accordion-btn subject-btn">Algebra</button>
+                                <div class="accordion-content">
+                                    <ul class="level-list">
+                                        <li>
+                                            <button class="level-btn">Podstawa</button>
+                                            <ul class="topic-list">
+                                                <li><a href="#wzory-skroconego-mnozenia">Wzory skróconego mnożenia</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item subject-item">
+                                <button class="accordion-btn subject-btn">Kombinatoryka</button>
+                                <div class="accordion-content">
+                                    <ul class="level-list">
+                                        <li>
+                                            <button class="level-btn">Podstawa</button>
+                                            <ul class="topic-list">
+                                                <li><a href="#regula-mnozenia">Reguła mnożenia i dodawania</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <button class="level-btn">Rozszerzenie</button>
+                                            <ul class="topic-list">
+                                                <li><a href="#dwumian-newtona">Dwumian Newtona</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item subject-item">
+                                <button class="accordion-btn subject-btn">Trygonometria</button>
+                                <div class="accordion-content">
+                                    <ul class="level-list">
+                                        <li>
+                                            <button class="level-btn">Podstawa</button>
+                                            <ul class="topic-list">
+                                                <li><a href="#funkcje-kat-ostry">Funkcje kąta ostrego</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <button class="level-btn">Rozszerzenie</button>
+                                            <ul class="topic-list">
+                                                <li><a href="#rownania-trygonometryczne">Równania trygonometryczne</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="gra-kalkulator" class="game-section">
+            <h2>Kalkulator</h2>
+            
+            <div class="game-config">
+                <div class="config-group">
+                    <label>Wybierz działania w grze:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="operation" value="add" checked> Dodawanie</label>
+                        <label><input type="checkbox" name="operation" value="subtract" checked> Odejmowanie</label>
+                        <label><input type="checkbox" name="operation" value="multiply"> Mnożenie</label>
+                        <label><input type="checkbox" name="operation" value="divide"> Dzielenie</label>
+                        <label><input type="checkbox" name="operation" value="power"> Potęgowanie</label>
+                        <label><input type="checkbox" name="operation" value="root"> Pierwiastkowanie</label>
+                    </div>
+                </div>
+
+                <div class="config-group">
+                    <label for="time-limit">Czas na odpowiedź:</label>
+                    <div class="time-input-row">
+                        <select id="time-limit">
+                            <option value="0">Nieograniczony</option>
+                            <option value="20">20 sekund</option>
+                            <option value="15">15 sekund</option>
+                            <option value="10">10 sekund</option>
+                            <option value="custom">Własny...</option>
+                        </select>
+                        <input type="number" id="custom-time" class="hidden" placeholder="Wpisz sekundy" min="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-instructions">
+                <h3>Jak wpisywać wyniki?</h3>
+                <ul>
+                    <li>Ułamki zwykłe wpisuj używając ukośnika, np. <code>1/2</code></li>
+                    <li>Pierwiastki zapisuj jako "sqrt", np. $\sqrt{3}$ wpisz jako <code>sqrt(3)</code></li>
+                    <li>Dla pierwiastków wyższych stopni używaj potęg ułamkowych, np. <code>8^(1/3)</code></li>
+                </ul>
+            </div>
+
+            <button id="start-game-btn" class="btn-primary">Rozpocznij grę</button>
+
+            <div id="game-area" class="hidden">
+            </div>
         </section>
 
-
-        <section class="features">
-
-            <a href="teoria.html" class="feature-box">
-                <h3>Liceum Krok po Kroku</h3>
-                <p>Podział na klasy 1-4 oraz poziom podstawowy i rozszerzony. Wszystko w jednym miejscu.</p>
-            </a>
+        <section id="teoria-tresc" class="theory-content">
             
+            <article id="pitagoras" class="topic-section">
+                <h2>Twierdzenie Pitagorasa</h2>
+                <p>Treść, wzór i przykład dotyczący twierdzenia Pitagorasa.</p>
+            </article>
 
-            <a href="gra.html" class="feature-box">
-                <h3>Gra Kalkulator</h3>
-                <p>Wybierz tryb trudności, rozwiązuj równania na czas i bij własne rekordy.</p>
-            </a>
+            <article id="pole-trojkata" class="topic-section">
+                <h2>Pole trójkąta</h2>
+                <p>Treść dotycząca wzorów na pole trójkąta.</p>
+            </article>
+
+            <article id="twierdzenie-sinusow" class="topic-section">
+                <h2>Twierdzenie sinusów</h2>
+                <p>Treść dotycząca twierdzenia sinusów dla poziomu rozszerzonego.</p>
+            </article>
+
+            <article id="wzory-skroconego-mnozenia" class="topic-section">
+                <h2>Wzory skróconego mnożenia</h2>
+                <p>Treść dotycząca wzorów skróconego mnożenia.</p>
+            </article>
+
+            <article id="regula-mnozenia" class="topic-section">
+                <h2>Reguła mnożenia i dodawania</h2>
+                <p>Treść, wzory i przykłady z kombinatoryki dla poziomu podstawowego.</p>
+            </article>
+
+            <article id="dwumian-newtona" class="topic-section">
+                <h2>Dwumian Newtona</h2>
+                <p>Treść dotycząca wzoru i zastosowania dwumianu Newtona.</p>
+            </article>
+
+            <article id="funkcje-kat-ostry" class="topic-section">
+                <h2>Funkcje kąta ostrego</h2>
+                <p>Treść dotycząca funkcji trygonometrycznych w trójkącie prostokątnym.</p>
+            </article>
+
+            <article id="rownania-trygonometryczne" class="topic-section">
+                <h2>Równania trygonometryczne</h2>
+                <p>Treść dotycząca rozwiązywania równań trygonometrycznych.</p>
+            </article>
+            
         </section>
     </main>
 
-
-<footer>
-    <p>&copy; 2026 Jak to policzyć. Projekt edukacyjny.</p>
-    <p>
-        Przydatne linki: 
-        <a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/wybrane_wzory_matematyczne_EM2023.pdf" target="_blank">Tablice matematyczne CKE (PDF)</a>
-    </p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 Jak to policzyć. Projekt edukacyjny.</p>
+        <p><a href="https://cke.gov.pl/images/_EGZAMIN_MATURALNY_OD_2023/Informatory/wybrane_wzory_matematyczne_EM2023.pdf" target="_blank">Tablice matematyczne CKE (PDF)</a></p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
