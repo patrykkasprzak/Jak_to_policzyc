@@ -20,3 +20,34 @@ body.dark-theme .btn-top {
 body.dark-theme .btn-top:hover {
     background-color: #333;
 }
+body.dark-theme .formula-box {
+    background-color: #1a2c3a;
+    border-left-color: var(--accent-color);
+}
+
+body.dark-theme .example-box {
+    background-color: #242424;
+    border-color: #444;
+}
+body.dark-theme .solution-content {
+    border-top-color: #444;
+}
+
+body.dark-theme .game-header,
+body.dark-theme #game-summary h3 {
+    color: var(--text-color);
+}
+
+body.dark-theme #answer-input {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-theme .feedback-correct {
+    color: #2ecc71;
+}
+
+body.dark-theme .feedback-wrong {
+    color: #e74c3c;
+}
