@@ -172,17 +172,22 @@ body {
 
 .topic-list li a {
     display: block;
-    padding: 10px;
-    color: var(--text-color);
+    padding: 10px 15px;
+    color: var(--primary-color);
     text-decoration: none;
-    border-bottom: 1px dashed #ccc;
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
     transition: 0.2s;
 }
 
 .topic-list li a:hover {
     color: var(--accent-color);
+    border-color: var(--accent-color);
     font-weight: bold;
-    padding-left: 15px;
+    background-color: #f9f9f9;
+    padding-left: 20px;
 }
 
 .game-section {
@@ -288,12 +293,12 @@ footer a:hover {
 }
 .theory-img {
     max-width: 100%;
-    height: auto;
+    height: 250px; 
+    object-fit: contain; 
     border-radius: 5px;
-    margin: 15px 0;
+    margin: 15px auto; 
     display: block;
 }
-
 .formula-box {
     background-color: #e8f4fd;
     border-left: 4px solid var(--accent-color);
@@ -401,4 +406,99 @@ footer a:hover {
     font-size: 2rem;
     margin-bottom: 15px;
     color: var(--primary-color);
+}
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .theory-nav, 
+    .game-section, 
+    .theory-content {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .subject-link {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .accordion-btn, 
+    .level-btn {
+        padding: 10px 15px;
+        font-size: 1.2rem;
+    }
+
+    .equation-display {
+        font-size: 1.8rem;
+    }
+
+    .time-input-row {
+        flex-direction: column;
+    }
+
+    .time-input-row select, 
+    .time-input-row input {
+        width: 100%;
+    }
+
+    .theory-img {
+        height: 200px;
+    }
+}
+.theory-img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.theory-img:hover {
+    transform: scale(1.02);
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox.hidden {
+    display: none !important;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#lightbox-close:hover {
+    color: var(--accent-color);
 }

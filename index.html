@@ -193,7 +193,7 @@
                     <ul>
                         <li>Ułamki zwykłe wpisuj używając ukośnika, np. <code>1/2</code></li>
                         <li>Pierwiastki kwadratowe zapisuj jako "sqrt", np. $\sqrt{3}$ wpisz jako <code>sqrt(3)</code></li>
-                        <li>Pierwiastki sześcienne i wyższych stopni zapisuj potęgą, np. $\sqrt[3]{8}$ wpisz jako <code>8^(1/3)</code></li>
+                        <li>Pierwiastki sześcienne i wyższych stopni zapisuj potęgą, np. $\sqrt[3]{8}$, <code>8^(1/3)</code></li>
                     </ul>
                 </div>
 
@@ -226,7 +226,7 @@
                 <article id="pitagoras" class="topic-section">
                     <h3>Twierdzenie Pitagorasa</h3>
                     <p>W dowolnym trójkącie prostokątnym suma kwadratów długości przyprostokątnych jest równa kwadratowi długości przeciwprostokątnej.</p>
-                    <img src="assets/pitagoras.png" alt="Trójkąt prostokątny z oznaczeniami a, b, c" class="theory-img">
+                    <img src="assets/pitagoras.jpg" alt="Trójkąt prostokątny z oznaczeniami a, b, c" class="theory-img">
                     <div class="formula-box">
                         a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
                     </div>
@@ -248,7 +248,7 @@
                 <article id="pole-trojkata" class="topic-section">
                     <h3>Pole trójkąta</h3>
                     <p>Podstawowy wzór na pole trójkąta wykorzystuje długość jednej z jego podstaw oraz opuszczoną na nią wysokość.</p>
-                    <img src="assets/pole-trojkata.png" alt="Trójkąt z zaznaczoną wysokością h i podstawą a" class="theory-img">
+                    <img src="assets/pole_trojkata.png" alt="Trójkąt z zaznaczoną wysokością h i podstawą a" class="theory-img">
                     <div class="formula-box">
                         P = &frac12; &middot; a &middot; h
                     </div>
@@ -267,7 +267,7 @@
                 <article id="twierdzenie-sinusow" class="topic-section">
                     <h3>Twierdzenie sinusów</h3>
                     <p>Stosunek długości boku trójkąta do sinusa kąta leżącego naprzeciwko tego boku jest stały i równy średnicy okręgu opisanego na tym trójkącie.</p>
-                    <img src="assets/twierdzenie-sinusow.png" alt="Trójkąt wpisany w okrąg z promieniami R" class="theory-img">
+                    <img src="assets/twierdzenie_sinusow.png" alt="Trójkąt wpisany w okrąg z promieniami R" class="theory-img">
                     <div class="formula-box">
                         a / sin(&alpha;) = b / sin(&beta;) = c / sin(&gamma;) = 2R
                     </div>
@@ -335,7 +335,6 @@
                 <article id="dwumian-newtona" class="topic-section">
                     <h3>Sześcian sumy i różnicy (Dwumian Newtona)</h3>
                     <p>Szczególne przypadki rozwinięcia dwumianu Newtona dla potęgi trzeciej.</p>
-                    <img src="assets/trojkat-pascala.png" alt="Fragment Trójkąta Pascala" class="theory-img">
                     <div class="formula-box">
                         (a + b)<sup>3</sup> = a<sup>3</sup> + 3a<sup>2</sup>b + 3ab<sup>2</sup> + b<sup>3</sup><br>
                         (a - b)<sup>3</sup> = a<sup>3</sup> - 3a<sup>2</sup>b + 3ab<sup>2</sup> - b<sup>3</sup>
@@ -359,7 +358,7 @@
                 <article id="funkcje-kat-ostry" class="topic-section">
                     <h3>Funkcje kąta ostrego</h3>
                     <p>Funkcje trygonometryczne w trójkącie prostokątnym definiuje się jako stosunki długości odpowiednich boków.</p>
-                    <img src="assets/kat-ostry.png" alt="Trójkąt prostokątny z kątem alfa" class="theory-img">
+                    <img src="assets/alfa.png" alt="Trójkąt prostokątny z zaznaczonym kątem ostrym" class="theory-img">
                     <div class="formula-box">
                         sin(&alpha;) = a / c<br>
                         cos(&alpha;) = b / c<br>
@@ -378,9 +377,9 @@
                 </article>
 
                 <article id="rownania-trygonometryczne" class="topic-section">
-                    <h3>Równania trygonometryczne</h3>
-                    <p>Równania, w których niewiadoma występuje jako argument funkcji trygonometrycznej. Ich rozwiązania powtarzają się cyklicznie.</p>
-                    <img src="assets/wykres-sinus.png" alt="Wykres funkcji sinus z prostą y=0.5" class="theory-img">
+                    <h3>Równania trygonometryczne - sinus</h3>
+                    <p>Funkcja sinus przyjmuje wartości z przedziału od -1 do 1, a jej wykres ma charakter okresowy (powtarza się co 360&deg;). Równania z sinusem zazwyczaj posiadają nieskończenie wiele rozwiązań lub określoną ich liczbę w zadanym przedziale.</p>
+                    <img src="assets/sinus.png" alt="Wykres sinusoidy ilustrujący powtarzalność wartości funkcji sinus" class="theory-img">
                     <div class="formula-box">
                         sin(x) = y<sub>0</sub>
                     </div>
@@ -400,6 +399,10 @@
             </section>
             
         </section>
+        <div id="lightbox" class="hidden">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Powiększenie">
+        </div>
     </main>
 
     <footer>

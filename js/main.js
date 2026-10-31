@@ -131,7 +131,29 @@ document.addEventListener("DOMContentLoaded", function() {
             gameSetup.classList.remove('hidden');
         });
     }
+    const theoryImages = document.querySelectorAll('.theory-img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
 
+    if (lightbox && lightboxImg && lightboxClose) {
+        theoryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                lightbox.classList.remove('hidden');
+            });
+        });
+
+        lightboxClose.addEventListener('click', function() {
+            lightbox.classList.add('hidden');
+        });
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.add('hidden');
+            }
+        });
+    }
     function generateMathProblem() {
         const op = selectedOperations[Math.floor(Math.random() * selectedOperations.length)];
         let q = "";

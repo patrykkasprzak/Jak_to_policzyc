@@ -1,25 +1,51 @@
 body.dark-theme {
     --bg-color: #121212;
     --text-color: #e0e0e0;
-    --primary-color: #1a252f; 
+    --primary-color: #5dade2; 
     --accent-color: #3498db; 
     --white: #1e1e1e;
 }
 
-
-body.dark-theme .accordion-btn, 
-body.dark-theme .level-btn {
-    color: #e0e0e0;
-    border-color: #444;
+body.dark-theme .main-header {
+    border-bottom: 1px solid #333333;
 }
 
 body.dark-theme .btn-top {
-    border-color: #444;
+    border-color: #444444;
 }
 
 body.dark-theme .btn-top:hover {
-    background-color: #333;
+    background-color: #333333;
 }
+
+body.dark-theme .accordion-header {
+    background-color: #000000;
+    border-color: #333333;
+}
+
+body.dark-theme .accordion-header:hover {
+    background-color: #1a1a1a;
+}
+
+body.dark-theme .accordion-btn, 
+body.dark-theme .level-btn {
+    border-left-color: #333333;
+}
+
+body.dark-theme .topic-list li a {
+    color: var(--primary-color);
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #333333;
+}
+
+body.dark-theme .topic-list li a:hover {
+    border-color: var(--primary-color);
+    background-color: #1a1a1a;
+}
+
 body.dark-theme .formula-box {
     background-color: #1a2c3a;
     border-left-color: var(--accent-color);
@@ -27,10 +53,23 @@ body.dark-theme .formula-box {
 
 body.dark-theme .example-box {
     background-color: #242424;
-    border-color: #444;
+    border-color: #444444;
 }
+
 body.dark-theme .solution-content {
-    border-top-color: #444;
+    border-top-color: #444444;
+}
+
+body.dark-theme .game-config {
+    background-color: #1a1a1a;
+    border-color: #333333;
+}
+
+body.dark-theme .time-input-row select, 
+body.dark-theme .time-input-row input {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #444444;
 }
 
 body.dark-theme .game-header,
@@ -41,7 +80,7 @@ body.dark-theme #game-summary h3 {
 body.dark-theme #answer-input {
     background-color: #1e1e1e;
     color: #e0e0e0;
-    border-color: #444;
+    border-color: #444444;
 }
 
 body.dark-theme .feedback-correct {
